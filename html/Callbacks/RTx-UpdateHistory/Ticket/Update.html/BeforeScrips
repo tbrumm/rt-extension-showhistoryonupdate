@@ -1,4 +1,9 @@
 <& /Ticket/Elements/rtx-updatehistory-inline, Ticket => $Ticket &>
+
+<%INIT>
+return unless RT->Config->Get( 'HistoryOnUpdate', $session{'CurrentUser'} );
+</%INIT>
+
 <%ARGS>
 	$Ticket => undef
 </%ARGS>
