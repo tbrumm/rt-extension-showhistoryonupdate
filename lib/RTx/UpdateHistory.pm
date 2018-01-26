@@ -7,6 +7,17 @@ use version;
 
 our $VERSION = "1.0.0";
 
+$RT::Config::META{'HistoryOnUpdate'} = {
+    Section         => 'Ticket display',
+    Overridable     => 1,
+    Widget          => '/Widgets/Form/Boolean',
+    WidgetArguments => {
+        Description => 'Display Tickets History on Update Page', # loc
+        Hints       => '(' . __PACKAGE__ . ')',
+    },
+};
+
+
 1;
 =pod
 
